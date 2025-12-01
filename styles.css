@@ -1,0 +1,94 @@
+:root {
+    --bg-primary: #1b1b1b;
+    --bg-secondary: #141414;
+    --text-primary: #f1f1f1;
+    --text-secondary: #7e7e7e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font: 16px/1.5 sans-serif;
+}
+
+.active {
+    background-color: #7e7e7e;
+}
+
+body {
+    padding: 2em;
+
+    background-color: var(--bg-primary);
+}
+
+.wrapper {
+    max-width: 600px;
+}
+
+.display-month {
+    font-size: 1.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 5px;
+
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--text-secondary);
+}
+
+.prev,
+.next {
+    color: var(
+    --text-secondary)
+}
+
+.grid-container {
+    display: grid;
+
+    padding-top: 5px;
+
+    gap: 5px;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-item {
+    display: flex;
+
+    border-radius: 0.5rem;
+
+    aspect-ratio: 1 / 1;
+}
+
+.grid-item:hover {
+    background-color: var(--bg-secondary);
+}
+
+.grid-item p {
+    align-content: center;
+
+    margin: 0 auto;
+}
+
+.grid-weekday p {
+    font-weight: bold;
+
+    color: var(--text-secondary);
+}
+
+.grid-date p {
+    font-weight: bold;
+
+    color: var(--text-primary);
+}
+
+.grid-weekday {
+    border: none;
+
+    aspect-ratio: 2 / 1;
+}
